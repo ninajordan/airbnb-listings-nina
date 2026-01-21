@@ -46,7 +46,7 @@ async function loadListings() {
         </div>
   
         <!-- Creative addition -->
-        <button class="favorite-btn" data-id="${item.id}">♡ Save</button>
+        <button class="favorite-btn" data-id="${item.id}">👍 Like</button>
       </div>
     `;
   }
@@ -59,10 +59,10 @@ async function loadListings() {
   
         if (favs.includes(id)) {
           favs = favs.filter(x => x !== id);
-          btn.textContent = "♡ Save";
+          btn.textContent = "👍 Like";
         } else {
           favs.push(id);
-          btn.textContent = "❤️ Saved";
+          btn.textContent = "👍 Liked";
         }
   
         localStorage.setItem("favorites", JSON.stringify(favs));
